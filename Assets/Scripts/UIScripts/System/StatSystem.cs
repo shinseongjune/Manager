@@ -24,11 +24,12 @@ public class StatSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        AbilityUIManager.Instance.ShowTooltip();
+        string desc = GetComponent<StatComponent>().desc;
+        UIManager.Instance.ShowTooltip(desc);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        AbilityUIManager.Instance.HideTooltip();
+        UIManager.Instance.HideTooltip();
     }
 }
