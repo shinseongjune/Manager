@@ -70,6 +70,7 @@ public class PlayersContentsSystem : MonoBehaviour
             Text atkText = playerObject.transform.Find("PlayerDesc").Find("ATKText").GetComponent<Text>();
             Text defText = playerObject.transform.Find("PlayerDesc").Find("DEFText").GetComponent<Text>();
             Text conText = playerObject.transform.Find("PlayerDesc").Find("CONText").GetComponent<Text>();
+            playerObject.GetComponent<PlayerCardComponent>().player = player;
 
             //선수 카드 텍스트 입력
             nameText.text = player.LastName + " " + player.firstName;

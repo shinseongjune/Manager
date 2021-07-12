@@ -30,6 +30,6 @@ public class GameData : MonoBehaviour
 
     public Dictionary<int, Player> players;
     public Dictionary<int, Team> teams;
-    
 
+    public Date date = new Date();
 }

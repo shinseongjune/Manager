@@ -64,9 +64,11 @@ public class GameManager : MonoBehaviour
             {
                 MakeRandomTeam(ref id, ref teams, ref players);
             }
-            //GameData에 넘겨주기
+            //GameData에 데이터 입력
             gameData.players = players;
             gameData.teams = teams;
+            gameData.date.year = 2021;
+            gameData.date.month = 7;
         }
         catch (Exception e)
         {
