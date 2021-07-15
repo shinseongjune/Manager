@@ -21,7 +21,7 @@ public class PlayersContentsSystem : MonoBehaviour
     private void Awake()
     {
         gameData = GameObject.Find("GameData");
-        MAX_PAGE = gameData.GetComponent<GameData>().teams[1].players.Count / PLAYERS_IN_ONE_PAGE + 1;
+        MAX_PAGE = gameData.GetComponent<GameData>().teams[1].players.Count / PLAYERS_IN_ONE_PAGE + (gameData.GetComponent<GameData>().teams[1].players.Count % PLAYERS_IN_ONE_PAGE == 0 ? 0 : 1);
     }
 
     public void PagePlus()
@@ -67,17 +67,21 @@ public class PlayersContentsSystem : MonoBehaviour
             playerObject.transform.SetParent(playerWrapperObject.transform);
             Text nameText = playerObject.transform.Find("PlayerDesc").Find("NameText").GetComponent<Text>();
             Text ageText = playerObject.transform.Find("PlayerDesc").Find("AgeText").GetComponent<Text>();
-            Text atkText = playerObject.transform.Find("PlayerDesc").Find("ATKText").GetComponent<Text>();
-            Text defText = playerObject.transform.Find("PlayerDesc").Find("DEFText").GetComponent<Text>();
-            Text conText = playerObject.transform.Find("PlayerDesc").Find("CONText").GetComponent<Text>();
+            Text aggressionText = playerObject.transform.Find("PlayerDesc").Find("AggressionText").GetComponent<Text>();
+            Text staminaText = playerObject.transform.Find("PlayerDesc").Find("StaminaText").GetComponent<Text>();
+            Text dexterityText = playerObject.transform.Find("PlayerDesc").Find("DexterityText").GetComponent<Text>();
+            Text intellectText = playerObject.transform.Find("PlayerDesc").Find("IntellectText").GetComponent<Text>();
+            Text resolveText = playerObject.transform.Find("PlayerDesc").Find("ResolveText").GetComponent<Text>();
             playerObject.GetComponent<PlayerCardComponent>().player = player;
 
             //선수 카드 텍스트 입력
             nameText.text = player.LastName + " " + player.firstName;
             ageText.text = player.age + "세";
-            atkText.text = "공격력: " + player.atk;
-            defText.text = "방어력: " + player.def;
-            conText.text = "체력: " + player.con;
+            aggressionText.text = "공격성: " + player.aggression;
+            staminaText.text = "체력: " + player.stamina;
+            dexterityText.text = "민첩성: " + player.dexterity;
+            intellectText.text = "지능: " + player.intellect;
+            resolveText.text = "결단력: " + player.resolve;
 
             //선수 카드 위치 조정
             switch (playerIndexInPage)

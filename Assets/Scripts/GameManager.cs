@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             {
                 MakeRandomPlayer(ref id, ref players);
             }
-            //TODO: 팀 생성
+            //TODO: 팀 생성// 플레이어 팀 생성 추가, 계약 생성 추가.
             Dictionary<int, Team> teams = new Dictionary<int, Team>();
             id = 1;
             for (int i = 0; i < NEW_GAME_TEAM_COUNT; i++)
@@ -88,9 +88,13 @@ public class GameManager : MonoBehaviour
         tempPlayer.LastName = "김";
         tempPlayer.age = UnityEngine.Random.Range(14, 22);
         //TODO: 스탯. 1차적으로 1~4 정도 선택, 1차랜덤값에 따라 랜덤 범위를 다르게해서 값 선택
-        tempPlayer.atk = UnityEngine.Random.Range(3, 9);
-        tempPlayer.def = UnityEngine.Random.Range(3, 9);
-        tempPlayer.con = UnityEngine.Random.Range(3, 9);
+        tempPlayer.aggression = UnityEngine.Random.Range(3, 9);
+        tempPlayer.stamina = UnityEngine.Random.Range(3, 9);
+        tempPlayer.dexterity = UnityEngine.Random.Range(3, 9);
+        tempPlayer.intellect = UnityEngine.Random.Range(3, 9);
+        tempPlayer.resolve = UnityEngine.Random.Range(3, 9);
+
+        tempPlayer.nowStamina = tempPlayer.stamina; // 현재 체력 = 최대 체력
         
         //선수 목록에 추가
         players.Add(id, tempPlayer);
@@ -107,7 +111,7 @@ public class GameManager : MonoBehaviour
         int cnt = UnityEngine.Random.Range(5, 9); //선수 숫자
         for(int i = 0; i < cnt; i++) //무작위 선수 할당
         {
-            while (true)
+            while (true) // 선수 수가 부족할 경우 무한루프 주의!
             {
                 int playerId = UnityEngine.Random.Range(1, NEW_GAME_PLAYER_COUNT + 1);
                 if(players[playerId].team < 1)

@@ -13,17 +13,19 @@ public class UpperBarSystem : MonoBehaviour
     private void Awake()
     {
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
+        WriteTeamName();
         WriteDate();
+    }
+
+    void WriteTeamName()
+    {
+        Text teamName = GameObject.Find("TeamName").GetComponent<Text>();
+        teamName.text = gameData.teams[1].name;
     }
 
     void WriteDate()
     {
         Date d = gameData.date;
-        dateText.text = d.year + "년 " + d.month + "월";
-    }
-
-    void ProgressDate()
-    {
-        gameData.date++;
+        dateText.text = d.year + "년 " + d.month + "월 " + d.quarter + "분기";
     }
 }
