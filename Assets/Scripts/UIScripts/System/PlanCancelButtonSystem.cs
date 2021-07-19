@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScheduleCancelButtonSystem : MonoBehaviour
+public class PlanCancelButtonSystem : MonoBehaviour
 {
     Button btn;
     public int id;
@@ -14,7 +14,7 @@ public class ScheduleCancelButtonSystem : MonoBehaviour
     {
         tcs = GameObject.Find("TrainingContents").GetComponent<TrainingContentsSystem>();
         btn = this.gameObject.GetComponent<Button>();
-        btn.onClick.AddListener(delegate { tcs.CancelSchedule(id); });
+        btn.onClick.AddListener(delegate { tcs.CancelPlan(id); });
         btn.onClick.AddListener(delegate { tcs.PageLoad(); });
     }
 }

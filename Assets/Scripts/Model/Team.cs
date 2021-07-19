@@ -6,4 +6,8 @@ public class Team
     public string name;
     public List<int> players = new List<int>();
     public long money = 5_000_000;
+
+    public bool isInChamps = false;
+    public bool isInGA = false;
+    public bool isInChallange = false;
 }

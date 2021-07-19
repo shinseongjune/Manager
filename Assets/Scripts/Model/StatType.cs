@@ -2,6 +2,7 @@ public enum STAT
 {
     AGGRESSION,
     STAMINA,
+    NOW_STAMINA,
     DEXTERITY,
     INTELLECT,
     RESOLVE,

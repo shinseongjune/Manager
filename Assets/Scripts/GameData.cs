@@ -31,5 +31,12 @@ public class GameData : MonoBehaviour
     public Dictionary<int, Player> players;
     public Dictionary<int, Team> teams;
 
-    public Date date = new Date();
+    public Date nowDate = new Date();
+
+    public League Champs;
+    public League GA;
+    public League challange;
+
+    public List<Schedule> schedules = new List<Schedule>();
+
 }

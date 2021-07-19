@@ -18,5 +18,9 @@ public class Player
 
     public int team = -1; // -1 = ¹«¼Ò¼Ó
 
-    public SCHEDULE_TYPE schedule = SCHEDULE_TYPE.REST;
+    public bool isRetired = false;
+
+    public SQUAD_STATUS status = SQUAD_STATUS.KEY_PLAYER;
+
+    public PLAN_TYPE plan = PLAN_TYPE.REST;
 }

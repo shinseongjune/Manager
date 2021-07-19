@@ -87,19 +87,19 @@ public class PlayersContentsSystem : MonoBehaviour
             switch (playerIndexInPage)
             {
                 case 0:
-                case 1:
-                case 2:
-                    playerObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector3(20, -20 - (184 * (playerIndexInPage % 3)), 0);
-                    break;
                 case 3:
-                case 4:
-                case 5:
-                    playerObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector3(20 + 553, -20 - (184 * (playerIndexInPage % 3)), 0);
-                    break;
                 case 6:
+                    playerObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector3(20 + (553 * (playerIndexInPage / 3)), -20, 0);
+                    break;
+                case 1:
+                case 4:
                 case 7:
+                    playerObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector3(20 + (553 * (playerIndexInPage / 3)), -20 - 184, 0);
+                    break;
+                case 2:
+                case 5:
                 case 8:
-                    playerObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector3(20 + 553 + 553, -20 - (184 * (playerIndexInPage % 3)), 0);
+                    playerObject.GetComponent<Image>().rectTransform.anchoredPosition = new Vector3(20 + (553 * (playerIndexInPage / 3)), -20 - 184 - 184, 0);
                     break;
             }
             playerIndexInPage++;

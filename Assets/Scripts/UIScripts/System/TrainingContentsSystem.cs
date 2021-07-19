@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Extensions;
 
 public class TrainingContentsSystem : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class TrainingContentsSystem : MonoBehaviour
 
     //훈련 스케줄 등록 관련 변수
     public bool isTrainingButtonOn = false;
-    public SCHEDULE_TYPE trainingButtonType;
+    public PLAN_TYPE trainingButtonType;
     //============================================
 
     private void Awake()
@@ -73,24 +74,24 @@ public class TrainingContentsSystem : MonoBehaviour
             playerObject.transform.SetParent(playerWrapperObject.transform);
             Text playerNameText = playerObject.transform.Find("PlayerInfo").Find("PlayerNameText").GetComponent<Text>();
             Text playerAgeText = playerObject.transform.Find("PlayerInfo").Find("PlayerAgeText").GetComponent<Text>();
-            ScheduleImageComponent scheduleImage = playerObject.transform.Find("ScheduleImage").GetComponent<ScheduleImageComponent>();
-            ScheduleCancelButtonSystem scheduleCancelButton = playerObject.transform.Find("ScheduleImage").Find("ScheduleCancelButton").GetComponent<ScheduleCancelButtonSystem>();
-            Text scheduleText = playerObject.transform.Find("ScheduleImage").Find("ScheduleText").GetComponent<Text>();
+            PlanImageComponent planImage = playerObject.transform.Find("PlanImage").GetComponent<PlanImageComponent>();
+            PlanCancelButtonSystem planCancelButton = playerObject.transform.Find("PlanImage").Find("PlanCancelButton").GetComponent<PlanCancelButtonSystem>();
+            Text planText = playerObject.transform.Find("PlanImage").Find("PlanText").GetComponent<Text>();
             playerObject.transform.Find("PlayerInfo").GetComponent<PlayerCardComponent>().player = player;
 
             //선수 카드 텍스트 입력
             playerNameText.text = player.LastName + " " + player.firstName;
             playerAgeText.text = player.age + "세";
-            scheduleImage.id = player.id;
-            scheduleCancelButton.id = player.id;
-            scheduleText.text = ScheduleHelper.ToString(player.schedule);
-            if(player.schedule != SCHEDULE_TYPE.REST)
+            planImage.id = player.id;
+            planCancelButton.id = player.id;
+            planText.text = player.plan.GetString();
+            if (player.plan != PLAN_TYPE.REST)
             {
-                playerObject.transform.Find("ScheduleImage").Find("ScheduleCancelButton").gameObject.SetActive(true);
+                playerObject.transform.Find("PlanImage").Find("PlanCancelButton").gameObject.SetActive(true);
             }
             else
             {
-                playerObject.transform.Find("ScheduleImage").Find("ScheduleCancelButton").gameObject.SetActive(false);
+                playerObject.transform.Find("PlanImage").Find("PlanCancelButton").gameObject.SetActive(false);
             }
 
             //선수 카드 위치 조정
@@ -134,37 +135,37 @@ public class TrainingContentsSystem : MonoBehaviour
         MAX_PAGE = playerTeam.players.Count;
     }
 
-    public void SetSchedule(int id)
+    public void SetPlan(int id)
     {
         GameData gd = gameData.GetComponent<GameData>();
-        gd.players[id].schedule = trainingButtonType;
+        gd.players[id].plan = trainingButtonType;
     }
 
-    public void SetScheduleEveryone()
+    public void SetPlanEveryone()
     {
         GameData gd = gameData.GetComponent<GameData>();
         for(int i = 0; i < gd.teams[1].players.Count; i++)
         {
             int id = gd.players[gd.teams[1].players[i]].id;
-            SetSchedule(id);
+            SetPlan(id);
         }
         PageLoad();
 
     }
 
-    public void CancelSchedule(int id)
+    public void CancelPlan(int id)
     {
         GameData gd = gameData.GetComponent<GameData>();
-        gd.players[id].schedule = SCHEDULE_TYPE.REST;
+        gd.players[id].plan = PLAN_TYPE.REST;
     }
 
-    public void CancelScheduleEveryone()
+    public void CancelPlanEveryone()
     {
         GameData gd = gameData.GetComponent<GameData>();
         for (int i = 0; i < gd.teams[1].players.Count; i++)
         {
             int id = gd.players[gd.teams[1].players[i]].id;
-            CancelSchedule(id);
+            CancelPlan(id);
         }
         PageLoad();
     }

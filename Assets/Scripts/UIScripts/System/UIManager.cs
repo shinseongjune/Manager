@@ -41,11 +41,13 @@ public class UIManager : MonoBehaviour
     private GameObject tooltipPrefab;
 
     GameData gameData;
+    GameManager gameManager;
 
     private void Start()
     {
         MakeTooltipObject();
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public void MakeTooltipObject()
@@ -72,6 +74,16 @@ public class UIManager : MonoBehaviour
 
     public void ProgressDate()
     {
+        gameManager.ProgressDate();
+    }
 
+    public void WriteDate()
+    {
+        GameObject.Find("Canvas").transform.Find("MainUI").Find("UpperBar").GetComponent<UpperBarSystem>().WriteDate();
+    }
+
+    public void ClickHomeButton()
+    {
+        GameObject.Find("Canvas").transform.Find("MainUI").Find("UpperBar").GetComponent<UpperBarSystem>().ClickHomeButton();
     }
 }

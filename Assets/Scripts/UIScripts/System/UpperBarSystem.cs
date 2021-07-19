@@ -23,9 +23,14 @@ public class UpperBarSystem : MonoBehaviour
         teamName.text = gameData.teams[1].name;
     }
 
-    void WriteDate()
+    public void WriteDate()
     {
-        Date d = gameData.date;
+        Date d = gameData.nowDate;
         dateText.text = d.year + "년 " + d.month + "월 " + d.quarter + "분기";
+    }
+
+    public void ClickHomeButton()
+    {
+        transform.Find("HomeButton").GetComponent<Button>().onClick.Invoke();
     }
 }

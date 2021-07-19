@@ -7,8 +7,8 @@ using System.Text;
 
 public class GameManager : MonoBehaviour
 {
-    const int NEW_GAME_PLAYER_COUNT = 300; // NEW_GAME_TEAM_COUNT * 8 이상으로 해야함!
-    const int NEW_GAME_TEAM_COUNT = 16;
+    const int NEW_GAME_PLAYER_COUNT = 1200; // NEW_GAME_TEAM_COUNT * 8 이상으로 해야함!
+    const int NEW_GAME_TEAM_COUNT = 64;
 
     //singleton==============================
     static GameManager gameManagerInstance = null;
@@ -39,11 +39,14 @@ public class GameManager : MonoBehaviour
     GameObject gameDataObject;
     GameData gameData;
 
+    LeagueManager leagueManager = LeagueManager.Instance;
+
     private void Start()
     {
         gameData = gameDataObject.GetComponent<GameData>();
     }
 
+    //새 게임 메소드=============================================
     public bool CreateNewGame()
     {
         bool ret = true;
@@ -67,8 +70,17 @@ public class GameManager : MonoBehaviour
             //GameData에 데이터 입력
             gameData.players = players;
             gameData.teams = teams;
-            gameData.date.year = 2021;
-            gameData.date.month = 7;
+            gameData.nowDate.year = 2021;
+            gameData.nowDate.month = 1;
+            gameData.nowDate.quarter = 1;
+
+            //challange league 참가
+            gameData.teams[1].isInChallange = true;
+            //적당히 챌린지리그에 추가 //TODO: 팀 수준 나눠서 생성 후 적절한 리그에 추가해야함.
+            for(int i = 2; i <= 16; i++)
+            {
+                gameData.teams[i].isInChallange = true;
+            }
         }
         catch (Exception e)
         {
@@ -88,11 +100,11 @@ public class GameManager : MonoBehaviour
         tempPlayer.LastName = "김";
         tempPlayer.age = UnityEngine.Random.Range(14, 22);
         //TODO: 스탯. 1차적으로 1~4 정도 선택, 1차랜덤값에 따라 랜덤 범위를 다르게해서 값 선택
-        tempPlayer.aggression = UnityEngine.Random.Range(3, 9);
-        tempPlayer.stamina = UnityEngine.Random.Range(3, 9);
-        tempPlayer.dexterity = UnityEngine.Random.Range(3, 9);
-        tempPlayer.intellect = UnityEngine.Random.Range(3, 9);
-        tempPlayer.resolve = UnityEngine.Random.Range(3, 9);
+        tempPlayer.aggression = UnityEngine.Random.Range(20, 50);
+        tempPlayer.stamina = UnityEngine.Random.Range(20, 50);
+        tempPlayer.dexterity = UnityEngine.Random.Range(20, 50);
+        tempPlayer.intellect = UnityEngine.Random.Range(20, 50);
+        tempPlayer.resolve = UnityEngine.Random.Range(20, 50);
 
         tempPlayer.nowStamina = tempPlayer.stamina; // 현재 체력 = 최대 체력
         
@@ -128,5 +140,51 @@ public class GameManager : MonoBehaviour
         }
         teams.Add(id, tempTeam);
         id++;
+    }
+    //=============================================================
+
+    //TODO: 진행 버튼 누르면 확인창->확인하면 progressdate()
+    public void ProgressDate()
+    {
+        //나머지 팀 턴 진행->
+        //->팀에 소속되지 않은 player들 
+
+        for(int i = 1; i <= gameData.teams.Count; i++)
+        {
+            Team team = gameData.teams[i];
+            for(int j = 0; j < team.players.Count; j++)
+            {
+                int playerId = team.players[j];
+                Player player = gameData.players[playerId];
+                TrainingGround.Instance.DoTraining(ref player);
+            }
+        }
+        gameData.nowDate++;
+        //->나이 진행
+        //->은퇴 진행
+        //->조건에 따라 무작위 선수 생성
+        //->나이에 따른 스탯 변화
+
+        //->지정된 날짜에 리그 출범
+        //챌린지 리그 8월 3분기 TODO:해당 date들 const로 만들것
+        if(gameData.nowDate.month == 8 && gameData.nowDate.quarter == 3)
+        {
+            //참가팀 확인
+            List<int> challTeams = new List<int>();
+            for(int i = 1; i <= gameData.teams.Count; i++)
+            {
+                if (gameData.teams[i].isInChallange) challTeams.Add(i);
+            }
+            if (challTeams.Count < 16)
+            {
+                //비는 만큼 새 팀 만들어 참가시키기
+            }
+            leagueManager.CreateLeague(gameData.nowDate, GAME_TYPE.CHALLANGE, challTeams);
+        }
+
+        //TODO: 뉴스 등등============>
+        //->화면 리로드
+        GameObject.Find("UIManager").GetComponent<UIManager>().WriteDate();
+        GameObject.Find("UIManager").GetComponent<UIManager>().ClickHomeButton();
     }
 }

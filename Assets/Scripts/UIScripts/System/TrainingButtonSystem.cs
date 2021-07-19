@@ -18,7 +18,7 @@ public class TrainingButtonSystem : MonoBehaviour, IDeselectHandler, IPointerCli
 
     //TODO: 시즌별로 훈련 나누기. 훈련 버튼 자동 생성. 아마 trainingcontentssystem에서
     [SerializeField]
-    SCHEDULE_TYPE type;
+    PLAN_TYPE type;
 
     private void Start()
     {
@@ -35,16 +35,16 @@ public class TrainingButtonSystem : MonoBehaviour, IDeselectHandler, IPointerCli
 
         if(results.Count > 0)
         {
-            ScheduleImageComponent sic;
-            if (sic = results[0].gameObject.GetComponent<ScheduleImageComponent>())
+            PlanImageComponent sic;
+            if (sic = results[0].gameObject.GetComponent<PlanImageComponent>())
             {
                 int id = sic.id;
-                trainingContentsSystem.SetSchedule(id);
+                trainingContentsSystem.SetPlan(id);
                 trainingContentsSystem.PageLoad();
             }
             else if (results[0].gameObject.name == "Everyone")
             {
-                trainingContentsSystem.SetScheduleEveryone();
+                trainingContentsSystem.SetPlanEveryone();
             }
             else
             {

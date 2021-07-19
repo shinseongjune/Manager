@@ -1,7 +1,6 @@
-public enum SCHEDULE_TYPE
+public enum PLAN_TYPE
 {
     REST,
-    TRAINING,
     COMBAT_PRACTICE,
     EXERCISE,
     AIMING_PRACTICE,

@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 8699126818455081018}
   - component: {fileID: 3354228719851935977}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PlanCancelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,7 +623,7 @@ GameObject:
   - component: {fileID: 8392782399131376402}
   - component: {fileID: 3754207242626770783}
   m_Layer: 5
-  m_Name: ScheduleCancelButton
+  m_Name: PlanCancelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 7336481449516771144}
   - component: {fileID: 8472533505766305280}
   m_Layer: 5
-  m_Name: ScheduleImage
+  m_Name: PlanImage
   m_TagString: ScheduleImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 7336481450784627215}
   - component: {fileID: 7336481450784627212}
   m_Layer: 5
-  m_Name: ScheduleText
+  m_Name: PlanText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
