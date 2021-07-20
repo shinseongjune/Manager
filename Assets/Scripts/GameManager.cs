@@ -146,8 +146,10 @@ public class GameManager : MonoBehaviour
     //TODO: 진행 버튼 누르면 확인창->확인하면 progressdate()
     public void ProgressDate()
     {
-        //나머지 팀 턴 진행->
-        //->팀에 소속되지 않은 player들 
+        //->TODO: 경기진행!!!
+
+        //TODO: 나머지 팀 턴 진행->(훈련배정, 리그 참가 여부(리그당 팀 수 제한할것), 플레이어 팀에 친선경기 신청?, 
+        //TODO: ->팀에 소속되지 않은 player들 훈련배정, 희망 연봉? 가고싶은 팀이나 관계같은건 낮은 우선순위로.
 
         for(int i = 1; i <= gameData.teams.Count; i++)
         {
@@ -160,12 +162,12 @@ public class GameManager : MonoBehaviour
             }
         }
         gameData.nowDate++;
-        //->나이 진행
-        //->은퇴 진행
+        //해가 변한 경우->나이 진행
+        //->은퇴 진행. 해가 변한 경우? 랜덤?
         //->조건에 따라 무작위 선수 생성
         //->나이에 따른 스탯 변화
 
-        //->지정된 날짜에 리그 출범
+        // 지정된 날짜에 리그 출범
         //챌린지 리그 8월 3분기 TODO:해당 date들 const로 만들것
         if(gameData.nowDate.month == 8 && gameData.nowDate.quarter == 3)
         {
@@ -177,13 +179,16 @@ public class GameManager : MonoBehaviour
             }
             if (challTeams.Count < 16)
             {
-                //비는 만큼 새 팀 만들어 참가시키기
+                //TODO:비는 만큼 새 팀 만들어 참가시키기
             }
             leagueManager.CreateLeague(gameData.nowDate, GAME_TYPE.CHALLANGE, challTeams);
         }
+        //TODO:ga리그
+        //TODO:챔스
 
         //TODO: 뉴스 등등============>
-        //->화면 리로드
+
+        //화면 리로드
         GameObject.Find("UIManager").GetComponent<UIManager>().WriteDate();
         GameObject.Find("UIManager").GetComponent<UIManager>().ClickHomeButton();
     }

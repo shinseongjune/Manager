@@ -33,8 +33,8 @@ public class GameData : MonoBehaviour
 
     public Date nowDate = new Date();
 
-    public League Champs;
-    public League GA;
+    public League champs;
+    public League ga;
     public League challange;
 
     public List<Schedule> schedules = new List<Schedule>();

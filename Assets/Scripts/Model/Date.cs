@@ -4,6 +4,18 @@ public class Date
     public int month = 7;
     public int quarter = 1;
 
+    public Date()
+    {
+
+    }
+
+    public Date(int y, int m, int q)
+    {
+        year = y;
+        month = m;
+        quarter = q;
+    }
+
     public static Date operator ++(Date date)
     {
         date.quarter++;
@@ -49,38 +61,40 @@ public class Date
 
     public static Date operator +(Date date, int i)
     {
-        date.quarter += i;
-        if(i > 4)
+        Date date1 = new Date(date.year, date.month, date.quarter);
+        date1.quarter += i;
+        if(date1.quarter > 4)
         {
             int m = 0;
-            if(date.quarter % 4 == 0)
+            if(date1.quarter % 4 == 0)
             {
-                m = date.quarter / 4 - 1;
-                date.quarter = 4;
+                m = date1.quarter / 4 - 1;
+                date1.quarter = 4;
             }
             else
             {
-                m = date.quarter / 4;
-                date.quarter %= 4;
+                m = date1.quarter / 4;
+                date1.quarter %= 4;
             }
-            date.month += m;
+
+            date1.month += m;
             if(m > 12)
             {
                 int y = 0;
-                if(date.month % 12 == 0)
+                if(date1.month % 12 == 0)
                 {
-                    y = date.month / 12 - 1;
-                    date.month = 12;
+                    y = date1.month / 12 - 1;
+                    date1.month = 12;
                 }
                 else
                 {
-                    y = date.month / 12;
-                    date.month %= 12;
+                    y = date1.month / 12;
+                    date1.month %= 12;
                 }
-                date.year += y;
+                date1.year += y;
             }
         }
-        return date;
+        return date1;
     }
 
     public int CompareTo(Date date)
