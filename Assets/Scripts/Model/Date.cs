@@ -82,4 +82,24 @@ public class Date
         }
         return date;
     }
+
+    public int CompareTo(Date date)
+    {
+        if (year.CompareTo(date.year) != 0)
+        {
+            return year.CompareTo(date.year);
+        }
+        else if (month.CompareTo(date.month) != 0)
+        {
+            return month.CompareTo(date.month);
+        }
+        else if (quarter.CompareTo(date.quarter) != 0)
+        {
+            return quarter.CompareTo(date.quarter);
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }
