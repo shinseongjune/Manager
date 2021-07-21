@@ -27,6 +27,7 @@ public class ScheduleContentsSystem : MonoBehaviour
             year--;
             WriteYear();
             WriteSchedules();
+            WriteMonthScheduleData();
         }
     }
 
@@ -37,6 +38,7 @@ public class ScheduleContentsSystem : MonoBehaviour
             year++;
             WriteYear();
             WriteSchedules();
+            WriteMonthScheduleData();
         }
     }
 
@@ -47,10 +49,9 @@ public class ScheduleContentsSystem : MonoBehaviour
 
     public void WriteSchedules()
     {
-        int nowYear = year;
         List<Schedule> schedules = gameData.schedules;
         Transform scheduleWrapperTransform = transform.Find("ScheduleWrapper");
-        //달력 클리어==========================================================================================
+        //달력 클리어========================================================================================== TODO:wrapper 하나로 따로 묶고 수정필요
         scheduleWrapperTransform.Find("Jan").Find("QuarterWrapper").Find("1").Find("VSText").GetComponent<Text>().text = "";
         scheduleWrapperTransform.Find("Jan").Find("QuarterWrapper").Find("2").Find("VSText").GetComponent<Text>().text = "";
         scheduleWrapperTransform.Find("Jan").Find("QuarterWrapper").Find("3").Find("VSText").GetComponent<Text>().text = "";
@@ -101,13 +102,24 @@ public class ScheduleContentsSystem : MonoBehaviour
         scheduleWrapperTransform.Find("Dec").Find("QuarterWrapper").Find("4").Find("VSText").GetComponent<Text>().text = "";
 
         //====================================================================================================
+
+        Date d = new Date();
         for (int i = 0; i < schedules.Count; i++)
         {
             Schedule s = schedules[i];
-            if(s.date.year != nowYear)
+            if(s.date.year < year)
             {
                 continue;
             }
+            if(s.date.year > year)
+            {
+                break;
+            }
+            if(s.date.CompareTo(d) == 0)
+            {
+                continue;
+            }
+            d = s.date;
             int m = s.date.month;
             int q = s.date.quarter;
 
@@ -187,5 +199,102 @@ public class ScheduleContentsSystem : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void SetMonth()
+    {
+        Transform scheduleWrapperTransform = transform.Find("ScheduleWrapper");
+        scheduleWrapperTransform.Find("Jan").GetComponent<ScheduleMonthComponent>().month = 1;
+        scheduleWrapperTransform.Find("Fab").GetComponent<ScheduleMonthComponent>().month = 2;
+        scheduleWrapperTransform.Find("Mar").GetComponent<ScheduleMonthComponent>().month = 3;
+        scheduleWrapperTransform.Find("Apr").GetComponent<ScheduleMonthComponent>().month = 4;
+        scheduleWrapperTransform.Find("May").GetComponent<ScheduleMonthComponent>().month = 5;
+        scheduleWrapperTransform.Find("Jun").GetComponent<ScheduleMonthComponent>().month = 6;
+        scheduleWrapperTransform.Find("Jul").GetComponent<ScheduleMonthComponent>().month = 7;
+        scheduleWrapperTransform.Find("Aug").GetComponent<ScheduleMonthComponent>().month = 8;
+        scheduleWrapperTransform.Find("Sep").GetComponent<ScheduleMonthComponent>().month = 9;
+        scheduleWrapperTransform.Find("Oct").GetComponent<ScheduleMonthComponent>().month = 10;
+        scheduleWrapperTransform.Find("Nov").GetComponent<ScheduleMonthComponent>().month = 11;
+        scheduleWrapperTransform.Find("Dec").GetComponent<ScheduleMonthComponent>().month = 12;
+    }
+
+    public void WriteMonthScheduleData()
+    {
+        List<Schedule> schedules = gameData.schedules;
+        Transform scheduleWrapperTransform = transform.Find("ScheduleWrapper");
+
+        scheduleWrapperTransform.Find("Jan").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Fab").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Mar").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Apr").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("May").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Jun").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Jul").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Aug").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Sep").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Oct").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Nov").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+        scheduleWrapperTransform.Find("Dec").GetComponent<ScheduleMonthComponent>().schedules.Clear();
+
+        for (int i = 0; i < schedules.Count; i++)
+        {
+            Schedule s = schedules[i];
+            if (s.date.year < year)
+            {
+                continue;
+            }
+            if (s.date.year > year)
+            {
+                break;
+            }
+
+            int m = s.date.month;
+
+            switch (m)
+            {
+                case 1:
+                    scheduleWrapperTransform.Find("Jan").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 2:
+                    scheduleWrapperTransform.Find("Fab").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 3:
+                    scheduleWrapperTransform.Find("Mar").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 4:
+                    scheduleWrapperTransform.Find("Apr").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 5:
+                    scheduleWrapperTransform.Find("May").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 6:
+                    scheduleWrapperTransform.Find("Jun").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 7:
+                    scheduleWrapperTransform.Find("Jul").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 8:
+                    scheduleWrapperTransform.Find("Aug").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 9:
+                    scheduleWrapperTransform.Find("Sep").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 10:
+                    scheduleWrapperTransform.Find("Oct").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 11:
+                    scheduleWrapperTransform.Find("Nov").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+                case 12:
+                    scheduleWrapperTransform.Find("Dec").GetComponent<ScheduleMonthComponent>().schedules.Add(s);
+                    break;
+            }
+        }
+    }
+
+    public void DestroySchedulePrefabWrapper()
+    {
+        GameObject wrapper = transform.Find("SchedulesWindow").Find("SchedulesScrollView").Find("Viewport").Find("SchedulesContent").Find("SchedulePrefabWrapper(Clone)").gameObject;
+        Destroy(wrapper);
     }
 }
