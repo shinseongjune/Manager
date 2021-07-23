@@ -63,6 +63,7 @@ public class TrainingGround
     private static void DoExercise(ref Player player)
     {
         player.stamina += 1;
+        player.nowStamina += 1;
     }
 
     private static void DoAimingPractice(ref Player player)
