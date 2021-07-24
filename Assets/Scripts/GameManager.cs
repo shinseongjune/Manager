@@ -186,6 +186,7 @@ public class GameManager : MonoBehaviour
         //TODO:ga리그
         //TODO:챔스
 
+        //TODO:아무 리그도 참가 안하거나 빚이 많은 팀 해체.
         //TODO: 뉴스 등등============>
 
         //화면 리로드
