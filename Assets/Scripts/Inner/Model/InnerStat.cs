@@ -7,4 +7,10 @@ public class InnerStat
     public bool isDirty;
 
     public readonly List<StatModifier> mods;
+
+    public InnerStat(float value)
+    {
+        this.baseValue = value;
+        mods = new List<StatModifier>();
+    }
 }
