@@ -1,11 +1,9 @@
 public enum STAT_MODS
 {
     PLAYER_STAT = 100,
-    ITEM_FLAT = 200,
-    ITEM_MUL = 300,
-    FLAT = 400,
-    MULA = 500,
-    MULB = 600,
-    MULC = 700,
-    MULD = 800,
+    FLAT = 200,
+    MULA = 300,
+    MULB = 400,
+    MULC = 500,
+    MULD = 600,
 }
