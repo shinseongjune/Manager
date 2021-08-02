@@ -2,85 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : MonoBehaviour
+public abstract class Unit : MonoBehaviour
 {
-    InnerCharacterManager innerCharacterManager = InnerCharacterManager.Instance;
+    protected InnerCharacterManager innerCharacterManager = InnerCharacterManager.Instance;
+    protected InnerStat attackDamage;
+    protected InnerStat armor;
+    protected float hp;
+    protected InnerStat maxHP;
+    protected float mp;
+    protected InnerStat maxMP;
+    protected InnerStat firePower;
+    protected InnerStat waterPower;
+    protected InnerStat naturePower;
+    protected InnerStat fireResist;
+    protected InnerStat waterResist;
+    protected InnerStat natureResist;
+    protected InnerStat movementSpeed;
+    protected InnerStat attackSpeed;
+    protected InnerStat attackRange;
+    protected InnerStat cooldownReduction;
+    protected InnerStat castingSpeed;
+    protected InnerStat splashArea;
+    protected InnerStat hpRegen;
+    protected InnerStat mpRegen;
+    protected InnerStat critChance;
+    protected InnerStat critDamage;
+    protected InnerStat sight;
 
-    InnerStat attackDamage;
-    InnerStat armor;
+    protected int team;
 
-    InnerStat hp;
-    InnerStat maxHP;
-
-    InnerStat mp;
-    InnerStat maxMP;
-
-    InnerStat firePower;
-    InnerStat waterPower;
-    InnerStat naturePower;
-
-    InnerStat fireResist;
-    InnerStat waterResist;
-    InnerStat natureResist;
-
-    InnerStat movementSpeed;
-    InnerStat attackSpeed;
-    InnerStat attackRange;
-
-    InnerStat cooldownReduction;
-    InnerStat castingSpeed;
-    InnerStat splashMag;
-
-    InnerStat hpRegen;
-    InnerStat mpRegen;
-
-    InnerStat critChance;
-    InnerStat critMag;
-
-    InnerStat sight;
-
-    public InnerStat AttackDamage => attackDamage;
-    public InnerStat Armor => armor;
-
-    public InnerStat HP => hp;
-    public InnerStat MaxHP => maxHP;
-
-    public InnerStat MP => mp;
-    public InnerStat MaxMP => maxMP;
-
-    public InnerStat FirePower => firePower;
-    public InnerStat WaterPower => waterPower;
-    public InnerStat NaturePower => naturePower;
-
-    public InnerStat FireResist => fireResist;
-    public InnerStat WaterResist => waterResist;
-    public InnerStat NatureResist => natureResist;
-
-    public InnerStat MovementSpeed => movementSpeed;
-    public InnerStat AttackSpeed => attackSpeed;
-    public InnerStat AttackRange => attackRange;
-
-    public InnerStat CooldownReduction => cooldownReduction;
-    public InnerStat CastingSpeed => castingSpeed;
-    public InnerStat SplashMag => splashMag;
-
-    public InnerStat HPRegen => hpRegen;
-    public InnerStat MPRegen => mpRegen;
-
-    public InnerStat CritChance => critChance;
-    public InnerStat CritMag => critMag;
-
-    public InnerStat Sight => sight;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public virtual InnerStat AttackDamage => attackDamage;
+    public virtual InnerStat Armor => armor;
+    public virtual float HP => hp;
+    public virtual InnerStat MaxHP => maxHP;
+    public virtual float MP => mp;
+    public virtual InnerStat MaxMP => maxMP;
+    public virtual InnerStat FirePower => firePower;
+    public virtual InnerStat WaterPower => waterPower;
+    public virtual InnerStat NaturePower => naturePower;
+    public virtual InnerStat FireResist => fireResist;
+    public virtual InnerStat WaterResist => waterResist;
+    public virtual InnerStat NatureResist => natureResist;
+    public virtual InnerStat MovementSpeed => movementSpeed;
+    public virtual InnerStat AttackSpeed => attackSpeed;
+    public virtual InnerStat AttackRange => attackRange;
+    public virtual InnerStat CooldownReduction => cooldownReduction;
+    public virtual InnerStat CastingSpeed => castingSpeed;
+    public virtual InnerStat SplashArea => splashArea;
+    public virtual InnerStat HPRegen => hpRegen;
+    public virtual InnerStat MPRegen => mpRegen;
+    public virtual InnerStat CritChance => critChance;
+    public virtual InnerStat CritDamage => critDamage;
+    public virtual InnerStat Sight => sight;
+    
+    public virtual int Team => team;
 }
