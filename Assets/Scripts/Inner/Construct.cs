@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Construct : Unit
+public abstract class Construct : Unit
 {
     public override InnerStat AttackDamage => attackDamage;
     public override InnerStat Armor => armor;

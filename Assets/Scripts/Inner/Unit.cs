@@ -53,7 +53,7 @@ public abstract class Unit : MonoBehaviour
     public virtual InnerStat MPRegen => mpRegen;
     public virtual InnerStat CritChance => critChance;
     public virtual InnerStat CritDamage => critDamage;
-    public virtual InnerStat Sight => sight;
+    public virtual InnerStat Sight => sight = new InnerStat(100);
     
     public virtual int Team => team;
 }

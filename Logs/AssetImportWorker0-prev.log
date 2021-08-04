@@ -15,11 +15,11 @@ C:/Users/sodau/Manager
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-9743
+5250
 Successfully changed project path to: C:/Users/sodau/Manager
 C:/Users/sodau/Manager
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 41.41 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 33.39 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.12f1 (b3b2c6512326)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
@@ -35,260 +35,40 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56484
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56848
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004066 seconds.
+Registered in 0.003376 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 32.47 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 32.09 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.857 seconds
+- Completed reload, in  1.800 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009152 seconds.
+Registered in 0.004462 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.184 seconds
+- Completed reload, in  0.879 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1571 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.5 MB.
-System memory in use after: 84.5 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2103.
-Total: 2.077100 ms (FindLiveObjects: 0.167500 ms CreateObjectMapping: 0.038900 ms MarkObjects: 1.771300 ms  DeleteObjects: 0.098000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005703 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 3.30 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.921 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1565 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.2 MB.
-System memory in use after: 84.3 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2107.
-Total: 1.889800 ms (FindLiveObjects: 0.184800 ms CreateObjectMapping: 0.039000 ms MarkObjects: 1.605700 ms  DeleteObjects: 0.059100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004410 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.847 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1565 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.2 MB.
-System memory in use after: 84.3 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2110.
-Total: 2.029700 ms (FindLiveObjects: 0.163700 ms CreateObjectMapping: 0.053400 ms MarkObjects: 1.743400 ms  DeleteObjects: 0.068100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  path: Assets/Scripts/Inner/Construct.cs
-  artifactKey: Guid(8e6993b45b2426d4caf2a3dea42b8a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Inner/Construct.cs using Guid(8e6993b45b2426d4caf2a3dea42b8a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9308827cdc833877b70783a49b4280f') in 0.023405 seconds 
-  Import took 0.026087 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.010415 seconds.
-  path: Assets/Scripts/Inner/Construct.cs
-  artifactKey: Guid(8e6993b45b2426d4caf2a3dea42b8a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Inner/Construct.cs using Guid(8e6993b45b2426d4caf2a3dea42b8a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9308827cdc833877b70783a49b4280f') in 0.001943 seconds 
-  Import took 0.004070 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.543128 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames
-  artifactKey: Guid(7dc8aa3e6e4b2ca47944aba1a29be794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames using Guid(7dc8aa3e6e4b2ca47944aba1a29be794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf0cb6876ff0e7585def6c4f0dae729b') in 0.002509 seconds 
-  Import took 0.005098 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.831638 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack
-  artifactKey: Guid(a1c329d6f90d9d44ca3052bbe63ddf76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack using Guid(a1c329d6f90d9d44ca3052bbe63ddf76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9ae2d31a3e32d89ab84d0779cb1bcfc') in 0.002238 seconds 
-  Import took 0.004906 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.498075 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Scenes
-  artifactKey: Guid(f4e42da93a5a109458f1dd6510a3a739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Scenes using Guid(f4e42da93a5a109458f1dd6510a3a739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3dc6b74990cca6b26f8201c96f7b095') in 0.002206 seconds 
-  Import took 0.004728 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.977072 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Scenes/demo.unity
-  artifactKey: Guid(919d9e06ba283bd4297e2b405e0cb2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Scenes/demo.unity using Guid(919d9e06ba283bd4297e2b405e0cb2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cccf7fa3f99dfc8b11bd9db690772f49') in 0.008816 seconds 
-  Import took 0.011438 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.919171 seconds.
-  path: Assets/Scenes/InnerPvP.unity
-  artifactKey: Guid(7a9f2c58c9d09244084d094bd538d702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/InnerPvP.unity using Guid(7a9f2c58c9d09244084d094bd538d702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26cbac4821d98f0f0f9b43918a0f4294') in 0.002428 seconds 
-  Import took 0.005012 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.763682 seconds.
-  path: Assets/Scenes/InnerPvP
-  artifactKey: Guid(51791ac45bdef9042bc21fcae5b1653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/InnerPvP using Guid(51791ac45bdef9042bc21fcae5b1653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '638eda49b194fe7ffa5485ad501cbbe7') in 0.002309 seconds 
-  Import took 0.004673 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.955517 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/corner-with-borders.obj
-  artifactKey: Guid(3230bf240b33fb94e8270d86f9e59098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/corner-with-borders.obj using Guid(3230bf240b33fb94e8270d86f9e59098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86382a9d818f3f1d41aa40470fe1650b') in 0.113966 seconds 
-  Import took 0.116608 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.713444 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/passage-with-borders.obj
-  artifactKey: Guid(5b8044e6f6d48d34d9b22b9c5eb6e799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/passage-with-borders.obj using Guid(5b8044e6f6d48d34d9b22b9c5eb6e799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c1a357d61d8ba028c094aec3537a0e') in 0.023310 seconds 
-  Import took 0.025885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.201741 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/straight-with-borders.obj
-  artifactKey: Guid(ba554c772410f934284d8ded98ae9329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/straight-with-borders.obj using Guid(ba554c772410f934284d8ded98ae9329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8563d47af1f2342e25ed88d9431e330') in 0.025344 seconds 
-  Import took 0.027914 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.525161 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/t-road-with-borders.obj
-  artifactKey: Guid(8b2f72e7b516c0d41804ae0b7704480e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/t-road-with-borders.obj using Guid(8b2f72e7b516c0d41804ae0b7704480e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faf6b1bde577ad78223e6dc8e8083996') in 0.024592 seconds 
-  Import took 0.027246 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.639586 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/Materials
-  artifactKey: Guid(e6f84e49353196042a2ccda5b58a344f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Walls/Materials using Guid(e6f84e49353196042a2ccda5b58a344f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8752a1c49282dd8fd434bcf0c2df27') in 0.002013 seconds 
-  Import took 0.004554 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.190674 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Towers/octogonal-tower.obj
-  artifactKey: Guid(b0e423cf233360742ab46b41ef7c1aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Towers/octogonal-tower.obj using Guid(b0e423cf233360742ab46b41ef7c1aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4af138aa93658caafbf766fded828300') in 0.024408 seconds 
-  Import took 0.026976 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.733345 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Towers/square-tower.obj
-  artifactKey: Guid(68cbf13e667e309489732c1a030b28a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Towers/square-tower.obj using Guid(68cbf13e667e309489732c1a030b28a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94dea1202bc27c98ce45ad0bc42cb54f') in 0.012890 seconds 
-  Import took 0.015389 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 41.217400 seconds.
-  path: Assets/_TerrainAutoUpgrade/layer_GrassUV02GrassUV02_N3d1cca0d6d0e9938.terrainlayer
-  artifactKey: Guid(e3b9aa75236420d4786e1a120e8f0a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_TerrainAutoUpgrade/layer_GrassUV02GrassUV02_N3d1cca0d6d0e9938.terrainlayer using Guid(e3b9aa75236420d4786e1a120e8f0a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43d0cd8eeb5579e8ea9f1ad54f557cdf') in 0.012131 seconds 
-  Import took 0.014899 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004548 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.813 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1565 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 87.6 MB.
-System memory in use after: 87.7 MB.
+Unloading 1572 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.0 MB.
+System memory in use after: 85.0 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2125.
-Total: 1.976000 ms (FindLiveObjects: 0.149600 ms CreateObjectMapping: 0.037000 ms MarkObjects: 1.726200 ms  DeleteObjects: 0.062300 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2105.
+Total: 1.860900 ms (FindLiveObjects: 0.154400 ms CreateObjectMapping: 0.036700 ms MarkObjects: 1.524200 ms  DeleteObjects: 0.144800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -302,18 +82,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 618.053727 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Textures/atlas-1.png
-  artifactKey: Guid(738a29680710d9d449451e4d13204c32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Textures/atlas-1.png using Guid(738a29680710d9d449451e4d13204c32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25fb98c28d8dfb70836f05b5c556d47b') in 0.049781 seconds 
-  Import took 0.052492 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 102.643476 seconds.
-  path: Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Towers/Materials
-  artifactKey: Guid(d71e0e0aa500c744ca9a7f063b8cd122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MedievalCastlePackLite/TsunoaGames/MedievalCastlePack/Towers/Materials using Guid(d71e0e0aa500c744ca9a7f063b8cd122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a217f0b14bed6a22e71d1d9f9908b9d5') in 0.002488 seconds 
-  Import took 0.005116 seconds .
+  path: Assets/Scripts/Inner/Unit.cs
+  artifactKey: Guid(cbc514eab42528143b5a86004bd611df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inner/Unit.cs using Guid(cbc514eab42528143b5a86004bd611df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3619f156a8183e6bf25c0c4bc0d12b62') in 0.017623 seconds 
+  Import took 0.019820 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
