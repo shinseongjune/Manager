@@ -26,5 +26,5 @@ public class InnerGameManager
     }
     //===================================================================
 
-    public int playerTeam;
+    public int playerTeam = -1;
 }
